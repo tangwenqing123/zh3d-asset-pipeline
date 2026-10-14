@@ -38,7 +38,7 @@ description: 中文3D资产全链生产管线——从一句中文提示词到�
 用户生成完说一声后，扫描平台清单→判新→追加manifest→批量下载（见 `references/hunyuan-sop.md` 的清单API段）。
 
 ```
-python scripts/batch_download_hunyuan.py   # 读 manifest.tsv，幂等跳过已存在
+python scripts/batch_download_hunyuan.py --base /path/to/assets   # 读 manifest.tsv，幂等跳过已存在；--base或环境变量ZH3D_ASSETS指定资产根目录
 ```
 
 manifest.tsv 格式（每行一资产，第5列可选=显式归类目录）：
